@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今天吃什么</title>
+    <meta
+      name="description"
+      content="今天吃什么：大转盘随机抽菜谱，每轮固定8道菜，可一键重新选取。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+QingKe+HuangYou&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+
+    <main class="layout">
+      <header class="hero card animate-rise">
+        <p class="eyebrow">WHEEL MODE</p>
+        <h1>今天吃什么</h1>
+        <p class="subtitle">只留一个答案方式：转盘决定。</p>
+      </header>
+
+      <section class="result card animate-rise delay-1" aria-live="polite" aria-atomic="true">
+        <h2>大转盘抽菜谱</h2>
+        <div class="wheel-stage">
+          <div class="pointer" aria-hidden="true"></div>
+          <div id="wheel" class="wheel">
+            <ul id="wheel-labels" class="wheel-labels"></ul>
+          </div>
+          <div class="wheel-center" aria-hidden="true">EAT</div>
+        </div>
+
+        <div class="actions">
+          <button id="spin-btn" class="btn btn-primary" type="button">开始抽菜谱</button>
+          <button id="reselect-btn" class="btn btn-secondary" type="button">重新选取 8 道菜</button>
+        </div>
+
+        <p id="pool-hint" class="pool-hint"></p>
+
+        <article id="result-card" class="result-card empty">
+          <p>点击“开始抽菜谱”，看看今天吃哪一道。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
